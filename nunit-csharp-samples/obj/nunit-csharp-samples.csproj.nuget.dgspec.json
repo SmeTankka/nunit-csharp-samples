@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/vanyachernov/Desktop/nunit-csharp-samples/nunit-csharp-samples/nunit-csharp-samples.csproj": {}
+    "D:\\College\\Тестування ПЗ\\Практична робота 10. Git\\nunit-csharp-samples\\nunit-csharp-samples\\nunit-csharp-samples.csproj": {}
   },
   "projects": {
-    "/Users/vanyachernov/Desktop/nunit-csharp-samples/nunit-csharp-samples/nunit-csharp-samples.csproj": {
+    "D:\\College\\Тестування ПЗ\\Практична робота 10. Git\\nunit-csharp-samples\\nunit-csharp-samples\\nunit-csharp-samples.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vanyachernov/Desktop/nunit-csharp-samples/nunit-csharp-samples/nunit-csharp-samples.csproj",
+        "projectUniqueName": "D:\\College\\Тестування ПЗ\\Практична робота 10. Git\\nunit-csharp-samples\\nunit-csharp-samples\\nunit-csharp-samples.csproj",
         "projectName": "nunit-csharp-samples",
-        "projectPath": "/Users/vanyachernov/Desktop/nunit-csharp-samples/nunit-csharp-samples/nunit-csharp-samples.csproj",
-        "packagesPath": "/Users/vanyachernov/.nuget/packages/",
-        "outputPath": "/Users/vanyachernov/Desktop/nunit-csharp-samples/nunit-csharp-samples/obj/",
+        "projectPath": "D:\\College\\Тестування ПЗ\\Практична робота 10. Git\\nunit-csharp-samples\\nunit-csharp-samples\\nunit-csharp-samples.csproj",
+        "packagesPath": "C:\\Users\\danii\\.nuget\\packages\\",
+        "outputPath": "D:\\College\\Тестування ПЗ\\Практична робота 10. Git\\nunit-csharp-samples\\nunit-csharp-samples\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/vanyachernov/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\danii\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

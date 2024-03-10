@@ -1,9 +1,14 @@
-/// <summary>
-/// A manager for a library's collection of books.
-/// </summary>
+using System.Collections.Generic;
+using System.Linq; 
+
 public class LibraryManager : ILibraryManager
 {
     private List<Book> _books;
+
+    public LibraryManager()
+    {
+        _books = new List<Book>(); 
+    }
 
     /// <summary>
     /// Adds a book to the library's collection.
@@ -11,8 +16,16 @@ public class LibraryManager : ILibraryManager
     /// <param name="book">The book to add.</param>
     public void AddBook(Book book)
     {
-        // TODO step 1.
-        // TODO step 2.
+        // Перевірка на відсутність книги в колекції перед додаванням
+        if (!_books.Any(b => b.Title == book.Title && b.Author == book.Author))
+        {
+            _books.Add(book); // Додавання книги до колекції
+        }
+        else
+        {
+            // Книга вже існує, тому викидаємо виняток
+            throw new Exception("Book already exists in the library.");
+        }
     }
 
     /// <summary>
@@ -21,6 +34,14 @@ public class LibraryManager : ILibraryManager
     /// <param name="book">The book to remove.</param>
     public void RemoveBook(Book book)
     {
-        // TODO step 1.
+        // Видалення книги з колекції за умовою відповідності назви та автора
+        _books.RemoveAll(b => b.Title == book.Title && b.Author == book.Author);
     }
+
+    public List<Book> SearchBooks(string query)
+{
+    return _books.Where(b => b.Title.Contains(query) || b.Author.Contains(query)).ToList();
 }
+
+}
+

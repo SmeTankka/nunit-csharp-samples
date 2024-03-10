@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = nunit_csharp_samples
-build_property.ProjectDir = /Users/vanyachernov/Desktop/nunit-csharp-samples/nunit-csharp-samples/
+build_property.ProjectDir = D:\College\Тестування ПЗ\Практична робота 10. Git\nunit-csharp-samples\nunit-csharp-samples\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
