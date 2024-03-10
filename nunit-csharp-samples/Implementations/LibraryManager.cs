@@ -15,18 +15,19 @@ public class LibraryManager : ILibraryManager
     /// </summary>
     /// <param name="book">The book to add.</param>
     public void AddBook(Book book)
+{
+    // Перевірка, чи передана книга не null і чи її артикул унікальний
+    if (book != null && !_books.Any(b => b.Articul == book.Articul))
     {
-        // Перевірка на відсутність книги в колекції перед додаванням
-        if (!_books.Any(b => b.Title == book.Title && b.Author == book.Author))
-        {
-            _books.Add(book); // Додавання книги до колекції
-        }
-        else
-        {
-            // Книга вже існує, тому викидаємо виняток
-            throw new Exception("Book already exists in the library.");
-        }
+        _books.Add(book); // Додавання книги до колекції, якщо вона унікальна
     }
+    else
+    {
+        // Книга вже існує або передано null, тому викидаємо виняток
+        throw new Exception("Book cannot be added. It might already exist or null was provided.");
+    }
+}
+
 
     /// <summary>
     /// Removes a book from the library's collection.

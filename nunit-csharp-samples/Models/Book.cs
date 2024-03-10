@@ -11,4 +11,5 @@ public class Book
     public string Author { get; set; }
 
     // TODO step 2.
+    public string Articul { get; set; }
 }
