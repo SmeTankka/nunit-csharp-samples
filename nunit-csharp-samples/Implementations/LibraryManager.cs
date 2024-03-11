@@ -1,26 +1,37 @@
-/// <summary>
-/// A manager for a library's collection of books.
-/// </summary>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 public class LibraryManager : ILibraryManager
 {
     private List<Book> _books;
 
-    /// <summary>
-    /// Adds a book to the library's collection.
-    /// </summary>
-    /// <param name="book">The book to add.</param>
-    public void AddBook(Book book)
+    public LibraryManager()
     {
-        // TODO step 1.
-        // TODO step 2.
+        _books = new List<Book>();
     }
 
-    /// <summary>
-    /// Removes a book from the library's collection.
-    /// </summary>
-    /// <param name="book">The book to remove.</param>
+    public List<Book> Books => _books;
+
+    public void AddBook(Book book)
+    {
+        if (book != null && !_books.Any(b => b.Articul == book.Articul))
+        {
+            _books.Add(book);
+        }
+        else
+        {
+            throw new Exception("Book cannot be added. It might already exist or null was provided.");
+        }
+    }
+
     public void RemoveBook(Book book)
     {
-        // TODO step 1.
+        _books.RemoveAll(b => b.Title == book.Title && b.Author == book.Author);
+    }
+
+    public List<Book> SearchBooks(string query)
+    {
+        return _books.Where(b => b.Title.Contains(query) || b.Author.Contains(query)).ToList();
     }
 }
